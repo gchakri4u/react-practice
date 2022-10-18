@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Api from "./api/Api";
+import "./Home.scss"
+
 /*
 Empty dependency array
 ----------------------
@@ -10,22 +12,39 @@ So for example, for useEffect it means the callback will run once at the beginni
 */
 function Home() {
     const [summary, setSummary] = useState({
-        confirmed: {
-            detail: "",
-            value: 0
-        }
+        confirmed: 0,
+        recovered: 0,
+        deaths: 0
     });
     useEffect(() => {
         const getSummaryFromApi = async () => {
-            let data = await Api.getGlobalSummary();
-            setSummary(data);
+            let summary = await Api.getGlobalSummary();
+            if (summary == null) return;
+            let { confirmed, recovered, deaths } = summary;
+            setSummary({
+                confirmed: confirmed.value,
+                recovered: recovered.value,
+                deaths: deaths.value
+            });
         }
         getSummaryFromApi();
-    },/*Empty Depenency Array*/[]);
+    },/*Empty Dependency Array*/[]);
     return (
-        <div>
-            I am in Coronovirus Home Page
-            {summary.confirmed.detail}
+        <div id="home">
+            <div id="summary">
+                <div className="confirmed">
+                    <label>Confirmed</label>
+                    <label>{summary.confirmed}</label>
+                </div>
+                <div className="recovered">
+                    <label>Recovered</label>
+                    <label>{summary.recovered}</label>
+                </div>
+                <div className="deaths">
+                    <label>Deaths</label>
+                    <label>{summary.deaths}</label>
+                </div>
+            </div>
         </div>
     );
 }

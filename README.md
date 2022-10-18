@@ -16,6 +16,10 @@ npm install react-router-dom
 ```
 npm install axios
 ```
+5. Install sass
+```
+npm install sass
+```
 
 ## React Functional Components
 

@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './Home';
+import Home from './Home/Home';
 import CoronavirusHome from "./coronavirus/Home";
 import CoronavirusCountry from "./coronavirus/Country";
-
 
 function App() {
   return (
