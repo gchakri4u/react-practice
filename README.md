@@ -1,6 +1,6 @@
 # React Practice
 
-1. Create a react app with Typescript
+1. Create a react app
 ```
 npx create-react-app <my-app>
 ```
@@ -15,4 +15,15 @@ npm install react-router-dom
 4. Install Axios
 ```
 npm install axios
+```
+
+## React Functional Components
+
+1. Issues of useEffect
+```
+https://articles.wesionary.team/why-useeffect-is-a-bad-place-to-make-api-calls-98a606735c1c
+```
+2. Benefits of React functional components
+```
+https://www.confluent.io/blog/moving-to-react-benefits-and-lessons-learned-building-confluent-cloud-ui/
 ```
