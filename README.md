@@ -20,6 +20,10 @@ npm install axios
 ```
 npm install sass
 ```
+6. Practice Flex Frog for learning flex-box
+```
+https://flexboxfroggy.com/
+```
 
 ## React Functional Components
 
