@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './home1/Home';
+import Home from './home/Home';
 import CoronavirusHome from "./coronavirus/Home";
 import CoronavirusCountry from "./coronavirus/Country";
 
