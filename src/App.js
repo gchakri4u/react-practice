@@ -6,6 +6,7 @@ import CoronavirusHome from "./coronavirus/Home";
 import CoronavirusCountry from "./coronavirus/Country";
 
 function App() {
+  //TODO: /coronavirus/countries/ should redirect to home page of coronavirus page
   return (
     <Router>
       <Routes>
